@@ -22,11 +22,13 @@ import tkinter as tk
 
 
 def binary_to_decimal(binary):
+    b = binary [0] + binary[1] + binary[2] + binary [3] + binary[4] + binary[5] + binary[6] + binary[7]
+    decimal = int(b,2)
     # binary is a tuple of length 8
     # return value is an integer decimal
 
 
-    return decimal 
+    return decimal
 
 def decimal_to_binary(decimal):
     # decimal is an integer value
