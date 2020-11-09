@@ -31,6 +31,10 @@ def binary_to_decimal(binary):
     return decimal
 
 def decimal_to_binary(decimal):
+    a = bin (decimal)[2:].zfill(8)
+    binary = [a[0],a[1],a[2],a[3],a[4],a[5],a[6],a[7]]
+    return binary 
+
     # decimal is an integer value
     # binary is a tuple of length 8 that contains 1's and 0's
 
