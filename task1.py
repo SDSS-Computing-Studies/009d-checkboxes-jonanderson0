@@ -42,12 +42,21 @@ def decimal_to_binary(decimal):
 
 
 def get_binary():
+    decimal = int(e1.get())
+    
     # function should read the entry widget and generate an integer
     # this integer will be used as an input parameter for decimal to binary and the result updated
     # in the 8 checkboxes
 
     binary = binary_to_decimal(decimal)
-
+    s1.set(binary[0])
+    s2.set(binary[1])
+    s3.set(binary[2])
+    s4.set(binary[3])
+    s5.set(binary[4]) 
+    s6.set(binary[5])
+    s7.set(binary[6])
+    s8.set(binary[7])
 
 def get_decimal():
     # function should read the checkboxes and generate a tuple called binary of length 8 that has 1's and 0's
