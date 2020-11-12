@@ -18,8 +18,10 @@ Use assignment_test.py to test your functions
 
 
 import tkinter as tk 
+from tkinker import *
+win=tk.Tk()
 
-
+titleLabel = Label(win, text ="Binary/Decimal Converter!")
 
 def binary_to_decimal(binary):
     b = binary [0] + binary[1] + binary[2] + binary [3] + binary[4] + binary[5] + binary[6] + binary[7]
@@ -63,19 +65,41 @@ def get_decimal():
     # this tuple will be used as an input parameter for binary_to_decimal and the result updated
     # in the entry box
     binary = []
+    binary.append(s1.get())
+    binary.append(s2.get())
+    binary.append(s3.get())
+    binary.append(s4.get())
+    binary.append(s5.get())
+    binary.append(s6.get())
+    binary.append(s7.get())
+    binary.append(s8.get())
     decimal = binary_to_decimal(binary)
+    b.set(decimal)
+b = StringVar()
+b.set("")
+w1 = Checkbutton (win,variable = s8)
+w2 = Checkbutton (win,variable = s7)
+w3 = Checkbutton (win,variable = s6)
+w4 = Checkbutton (win,variable = s5)
+w5 = Checkbutton (win,variable = s4)
+w6 = Checkbutton (win,variable = s3)
+w7 = Checkbutton (win,variable = s2)
+w8 = Checkbutton (win,variable = s1)
 
-
-
-win = tk.Tk()
-
-
-
+eb = Entry (win, textvariable = b)
 b1 = Button(win, text="Convert to Binary", command=get_binary)
 b2 = Button(win, text="Convert to Decimal", command=get_decimal)
-
-
-
-
+titleLabel.grid(row = 1, column = 2, columnspan = 6)
+w1.grid(row = 2, column = 1)
+w2.grid(row = 2, column = 2)
+w3.grid(row = 2, column = 3)
+w4.grid(row = 2, column = 4)
+w5.grid(row = 2, column = 5)
+w6.grid(row = 2, column = 6)
+w7.grid(row = 2, column = 7)
+w8.grid(row = 2, column = 8)
+b1.grid(row = 3, column = 1, columnspan = 4)
+b1.grid(row = 3, column = 1, columnspan = 4)
+eb.grid(row = 4, column = 2, columnspan = 6)
 
 win.mainloop()
